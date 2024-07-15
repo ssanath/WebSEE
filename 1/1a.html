@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vowel</title>
+    </head>
+    <body>
+        <script>
+            function translate(str) {
+                var vowel = ['a','e','i','o','u'];
+                var newStr = "";
+                for(var i=0;i<str.length;i++) {
+                    if(!vowel.includes(str[i]) && str[i] != " ") {
+                        newStr += str[i] + "o" + str[i];
+                    }
+                    else
+                    {
+                        newStr += str[i];
+                    }
+                }
+
+                return newStr;
+            }
+            var str = prompt("Enter the string: ");
+            var result = translate(str);
+            document.write(result);
+        </script>
+    </body>
+</html>

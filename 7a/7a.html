@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Change Address</title>
+        <script src="react/react.development.js"></script>
+        <script src="react/react-dom.development.js"></script>
+        <script src="react/prop-types.js"></script>
+        <script src="react/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class Address extends React.Component {
+                constructor() {
+                    super()
+                    this.state= {
+                        Name: "Sanath",
+                        Address: "Bangalore",
+                        Company: "Samsung"
+                    }
+                }
+                changeMessage() {
+                    this.setState({
+                        Name: "Rahul",
+                        Address: "Mumbai"
+                    })
+                }
+
+                render() {
+                    return (
+                        <div>
+                            <p>{this.state.Name} {this.state.Address} {this.state.Company}</p>
+                            <button onClick = {() => this.changeMessage()}>Change</button>
+                        </div>
+                    )
+                }
+            }
+
+            ReactDOM.render(<Address />, document.getElementById("root"));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "14a",
+  "version": "1.0.0",
+  "main": "14a.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node 14a.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pluralize</title>
+    </head>
+    <body>
+        <script>
+            function pluralize(num,noun) {
+                s = "";
+                if(num>1) {
+                    if(noun == "sheep") {
+                        s += noun;
+                    }
+                    else if(noun == "goose")
+                    {
+                        s += "geese";
+                    }
+                    else {
+                        s += noun + "s";
+                    }
+                    s = num + " " + s;
+                }
+                else if(num == 1) {
+                    s += num + " " +noun;
+                }
+                else {
+                    s += "Error";
+                }
+
+                return s;
+            }
+
+            document.write(pluralize(4,"sheep") + "<br>");
+            document.write(pluralize(2,"goose") + "<br>");
+            document.write(pluralize(1,"cat") + "<br>");
+            document.write(pluralize(5,"dog") + "<br>");
+            document.write(pluralize(-9,"dog") + "<br>");
+        </script>
+    </body>
+</html>

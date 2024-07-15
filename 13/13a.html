@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" name="name" pattern="[A-Za-z\s]+" required><br />
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="Please enter a valid email address" required><br />
+
+            <label for="phone">Phone: </label>
+            <input type="tel" name="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="080-555-5555" title="Please anter in the valid format" required><br />
+
+            <label for="sem">Semester: </label>
+            <input type="text" name="sem" min="1" max="8" required><br />
+
+            <label for="branch">Branch: </label>
+            <input list="branches" name="branch" required><br />
+            <datalist id="branches">
+                <option value="Computer Science and Engineering">
+                <option value="Mechanical Engineering">
+                <option value="Electrical Engineering">
+                <option value="Civil Engineering">
+            </datalist>
+
+            <label for="url">Website: </label>
+            <input type="url" name="url" pattern="http://.*" placeholder="http://example.com" required><br />
+            <input type="submit" name="submit" value="Submit!">
+        </form>
+    </body>
+</html>

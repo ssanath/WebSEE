@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Month</title>
+    </head>
+    <body>
+        <label for="monthNo">Month Number: </label>
+        <input type="text" id="monthNo">
+        <button type="submit" onclick="displayMonth()">Submit</button>
+        <p id="monthText"></p>
+        <script>
+            function covertMonth()
+            {
+                const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+                function validateMonth(num)
+                {
+                    if(isNaN(num) || num < 1 || num > 12)
+                    {
+                        return "Bad Number";
+                    }
+                    else
+                    {
+                        return months[Math.floor(num) - 1];
+                    }
+                }
+
+                return validateMonth;
+            }
+            var monthText = covertMonth();
+            function displayMonth()
+            {
+                var monthNo = parseFloat(document.getElementById("monthNo").value)
+                var result = monthText(monthNo);
+                document.getElementById("monthText").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

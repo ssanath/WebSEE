@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax</title>
+    </head>
+    <body>
+        <script>
+            function calculateTax() {
+                var tax = 0.4;
+                function price(value) {
+                    value = value + value*tax;
+                    return value;
+                }
+                return price;
+            }
+
+            var x = calculateTax();
+            var price = 350;
+            console.log("Price: ", price);
+            console.log("Price after tax: ", x(price))
+        </script>
+    </body>
+</html>
